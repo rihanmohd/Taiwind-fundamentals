@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    transitionDuration: {
+                        2000:'2000ms',
+                    }
+                }
+            }
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- No Transition -->
+     <button 
+     class="px-8 py-2 m-24 text-white bg-blue-500 rounded hover:bg-blue-700">
+        Click me
+     </button>
+
+     <!-- Transition -->
+     <button 
+     class="px-8 py-2 m-24 text-white bg-blue-500 rounded
+      hover:bg-blue-700 hover:opacity-20 transition-color
+       duration-1000">
+        Click me
+     </button>
+
+     <!-- Transition & Transform -->
+     <button 
+     class="px-8 py-2 m-24 text-white bg-blue-500 rounded 
+     hover:bg-blue-700 hover:rotate-12 transition-transform duration-1000">
+        Click me
+     </button>
+
+     <img class="w-48 hover:rotate-180 hover:scale-75 hover:skew-x-12 
+     transition duration-2000" src="1722770044071.png" alt="">
+</body>
+</html>
