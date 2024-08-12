@@ -1,358 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>shortly web</title>
+    <title>Testimonial Grid</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js" defer></script>
 </head>
-<body>
- <!-- Nav container -->
-  <nav class="relative container mx-auto p-6">
-    <!-- Flex container For all items -->
-     <div class="flex items-center justify-between">
-        <!-- Flex container for logo / menu -->
-         <div class="flex items-center space-x-20">
-            <!-- logo  -->
-             <img src="images/logo (1).svg" alt="">
-             <!-- left menu -->
-              <div class="hidden space-x-8 font-bold lg:flex">
-                <a href="#" class="text-grayishViolet hover:text-veryDarkViolet">Feature
+<body class="bg-gray-200">
+   
+    <!-- Global container -->
+     <div class="container mx-auto max-w-7xl p-2 md:p-10">
+        <!-- Grid container -->
+         <div class="grid gap-6 grid-cols-1 text-white md:grid-cols-4
+         md:grid-rows-2">
+            <!-- Box 1 -->
+             <div class="relative p-10 rounded-xl bg-purple-700 md:col-span-2">
+                <!-- quotes image -->
+                 <img src="images/bg-quotes.png" alt="" class="absolute  top-3 right-10
+                 scale-125 md:top-7 md:right-24 md:scale-150">
+                 <!-- Box Header -->
+                  <div class="flex z-10 space-x-4">
+                    <img src="images/profile-1.jpg" alt="" class="w-10 h-10 rounded-full ring-2
+                     ring-purple-300">
+                     <div class="text-sm">
+                        <h4 class="opacity-90">Daniel Collige</h4>
+                        <p class="opacity-50">Verified Graduate</p>
+                     </div>
+                  </div>
 
-                </a>
+                  <!-- Large text -->
+                   <p class="relative z-10 mt-6 text-xl">
+                    I  recived a job offer mid-course, and the subjects <I>learned were
+                        Current, if not more so, in the Company i joined.
+                        get every penny's worth.
+                    </I>
+                   </p>
 
-                <a href="#" class="text-grayishViolet hover:text-veryDarkViolet">Resources
-                    
-                </a>
-
-                <a href="#" class="text-grayishViolet hover:text-veryDarkViolet">Pricing
-                    
-                </a>
-
-              </div>
-         </div>
-
-         <!-- Right buttons menu -->
-          <div class="hidden items-center space-x-6 font-bold text-grayishViolet lg:flex">
-
-            <div class="hover:text-veryDarkViolet">Login</div>
-
-            <a href="#" 
-            class="px-8 py-3 font-bold text-white bg-cyan rounded-full hover:opacity-70">Sign Up</a>
-          </div>
-
-          <!-- Hamburger button  -->
-          <button 
-          id="menu-btn" 
-          class="open selection:block hamburger lg:hidden focus:outline-none">
-           <span class="hamburger-top"></span>
-           <span class="hamburger-middle"></span>
-           <span class="hamburger-bottom"></span>
-          </button>
-          
-     </div>
-
-     <!-- Mobile Menu -->
-      <div id="menu" class="absolute hidden p-6 rounded-lg bg-darkViolet left-6 right-6 top-20 z-100">
-        <div class="flex flex-col items-center justify-center w-full space-y-6 font-bold text-white rounded-sm">
-          <a href="#" class="w-full text-center">Features</a>
-          <a href="#" class="w-full text-center">Pricing</a>
-          <a href="#" class="w-full text-center">Resources</a>
-          <a href="#" class="w-full p-6 border-t border-gray-400 text-center">Login</a>
-          <a href="#" class="w-full py-3 text-center rounded-full bg-cyan">Sign Up</a>
-        </div>
-      </div>
-  </nav>
+                  <!-- Small Text -->
+                   <p class="mt-6 opacity-50 line-clamp-6">
+                    "I was an EMT for many years  before I joined the mycode.
+                    i have been looking to make aa transition and have heared some people worthhad an 
+                    amazing experience here.  I signed up for a free intru course and
+                    fun . I enrolled shortly here therefore . the next 12 weaks was the best 
+                    and most grualling time of my life.
+                    since completeing the course i have succesfully switched courses,
+                    working as aSoftware Engineer at a VR startup. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque tenetur, sed laudantium dolor eos earum vero, ullam commodi incidunt dicta expedita amet officia minima, error officiis enim! Tempora, officia ullam suscipit fugit eum animi nihil necessitatibus pariatur! Eaque reprehenderit consequuntur quos adipisci alias, aspernatur corrupti laboriosam? Aspernatur commodi quia expedita. "
+                   </p>
+             </div>
 
 
-  <!-- Hero Section -->
-   <section id="hero">
-    <!-- Hero Container -->
-     <div class="container flex flex-col-reverse mx-auto p-6 lg:flex-row">
-      <!-- Content container -->
-       <div class="flex flex-col space-y-10 mb-44 lg:mt-16 lg:w-1/2 xl:mb-52">
-          <h1 class="text-5xl font-bold text-center lg:text-6xl lg:max-w-md lg:text-left">More than just shorter links</h1>
+              <!-- Box 2 -->
+              <div class="p-10 rounded-xl bg-gray-600">
+                
+                 <!-- Box Header -->
+                  <div class="flex space-x-4">
+                    <img src="images/profile-2.jpg" alt="" class="w-10 h-10 rounded-full ring-2
+                     ring-purple-300">
+                     <div class="text-sm">
+                        <h4 class="opacity-90">jonathen walters</h4>
+                        <p class="opacity-50">Verified Graduate</p>
+                     </div>
+                  </div>
 
-          <p class="text-2xl text-center text-gray-400 lg:max-w-md lg:text-left">
-            Build your brand recognition and get detailed insighits on 
-            how your links are performing.
-          </p>
+                  <!-- Large text -->
+                   <p class="mt-6 text-xl">
+                The team was very Supportive and kept me motiveted
+                   </p>
 
-          <div class="mx-auto lg:mx-0">
-            <a href="#" class="py-5 px-10 text-2xl font-bold text-white bg-cyan rounded-full lg:py-4 hover:opacity-70">Get Start</a>
-          </div>
-       </div>
+                  <!-- Small Text -->
+                   <p class="mt-6 opacity-50 line-clamp-5">
+                    "I started as a total newbie with vertualy no coding
+                    skills. I now
+                    work as a mobile engeenier for a big company. This was one of the 
+                    best investments I have made in myself Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet similique magnam aspernatur veritatis, facere totam illo natus eveniet corrupti unde id nulla iste. Aliquam earum, laborum culpa veritatis nobis dolorem! Molestias iure sapiente sit quia! Non eveniet aperiam, alias ea nihil fugiat debitis iste, itaque exercitationem ducimus, vero quae maiores. "
+                   </p>
+                </div>
 
-      <!-- Image -->
-       <div class="mb-24 mx-auto md:w-180 lg:mb-0 lg:w-1/2">
-        <img src="images/illustration-working.svg" alt="">
-       </div>
-     </div>
-   </section>
+                 <!-- Box 3 -->
+              <div class="hidden p-10 rounded-xl text-gray-900 bg-white md:block
+              md:row-span-2">
+                
+                <!-- Box Header -->
+                 <div class="flex space-x-4">
+                   <img src="images/profile-3.jpg" alt="" class="w-10 h-10 rounded-full ring-2
+                    ring-purple-300">
+                    <div class="text-sm">
+                       <h4 class="opacity-90">kirra withel</h4>
+                       <p class="opacity-50">Verified Graduate</p>
+                    </div>
+                 </div>
 
-<!-- Shorten Section -->
- <section id="shorten"
- class="relative bg-gray-100">
- <!-- shorten Container -->
-  <div class="max-w-4xl mx-auto p-6 space-y-6">
-    <!-- Form -->
-     <form
-      id="link-form" class="relative flex flex-col w-full p-10 -mt-20 space-y-4 bg-darkViolet rounded-lg md:flex-row md:space-y-0 md:space-x-3">
+                 <!-- Large text -->
+                  <p class="mt-6 text-xl">
+               Such a life changing experience. Highly recomended!
+                  </p>
 
-      <input type="text" id="link-input" class="flex-1 p-3 border-2 rounded-lg placeholder-yellow-500 focus:outline-none" placeholder="Shorten alink here" >
+                 <!-- Small Text -->
+                  <p class="mt-6 opacity-50">
+                   "Before join the Mycode i have naver written a line ofcode.
+                   needed some structure from profetionals who can help me 
+                   learn programing staep by stap.
+                   I was encougred to enroll by a former 
+                   of thiers who can only say wonderfull things about 
+                   the program.
+                   efore join the Mycode i have naver written a line ofcode.
+                   needed some structure from profetionals who can help me 
+                   learn programing staep by stap.
+                   efore join the Mycode i have naver written a line ofcode.
+                   needed some structure from profetionals who can help me 
+                   learn programing staep by stap.
+                   I was encougred to enroll by a former 
+                   of thiers. "
+                  </p>
+               </div>
 
-      <button class="px-10 py-3 text-white bg-cyan rounded-lg hover:bg-cyanLight focus:outline-none md:py-2">
-        Shorten It
-      </button>
+                <!-- Box 4 -->
+              <div class="p-10 rounded-xl text-gray-900 bg-white">
+                
+                <!-- Box Header -->
+                 <div class="flex space-x-4">
+                   <img src="images/profile-1.jpg" alt="" class="w-10 h-10 rounded-full ring-2
+                    ring-purple-300">
+                    <div class="text-sm">
+                       <h4 class="opacity-90">Jennets Harmon</h4>
+                       <p class="opacity-50">Verified Graduate</p>
+                    </div>
+                 </div>
 
-      <!-- Error messages -->
-       <div id="err-msg" class="absolute left-7 bottom-3 text-red text-sm italic"> </div>
-    </form>
+                 <!-- Large text -->
+                  <p class="mt-6 text-xl">
+             An overall as a wonderfull and rewarding experience
+                  </p>
 
-    <!-- Link 1  -->
-     <div class="flex flex-col items-center justify-between w-full p-6 bg-white rounded-lg md:flex-row">
-      <p class="font-bold text-center text-veryDarkViolet md:text-left">
-        https://youtube.com/fromendomenter.io
-      </p>
+                 <!-- Small Text -->
+                  <p class="mt-6 opacity-50">
+                   "Thank you for the wonderfull! I now have a jobI really 
+                   enjoy. and make a good living while doing something I love."
+                  </p>
+               </div>
 
-      <div class="flex flex-col items-center justify-end flex-1 space-x-4 space-y-2 md:flex-row md:space-y-0">
-        <div class="font-bold text-cyan">
-          https://rel.link/J8F9F
-        </div>
-        <button class="p-2 px-8 text-white bg-cyan rounded-lg hover:opacity-70 focus:outline-none">
-          copy
-        </button>
-      </div>
-     </div>
+                <!-- Box 5 -->
+              <div class="p-10 rounded-xl bg-gray-900 md:col-span-2">
+                
+                <!-- Box Header -->
+                 <div class="flex space-x-4">
+                   <img src="images/profile-3.jpg" alt="" class="w-10 h-10 rounded-full ring-2
+                    ring-purple-300">
+                    <div class="text-sm">
+                       <h4 class="opacity-90">Patrick Abrams</h4>
+                       <p class="opacity-50">Verified Graduate</p>
+                    </div>
+                 </div>
 
-     <!-- Link 2  -->
-     <div class="flex flex-col items-center justify-between w-full p-6 bg-white rounded-lg md:flex-row">
-      <p class="font-bold text-center text-veryDarkViolet md:text-left">
-        https://linkden.com/fromendomenter.io
-      </p>
+                 <!-- Large text -->
+                  <p class="mt-6 text-xl">
+              " Awesome teaching supports from TAs who did the myCode 
+              themeselves.
+              Getting guidence from them and learning from thier experiences was easy."
+                  </p>
 
-      <div class="flex flex-col items-center justify-end flex-1 space-x-4 space-y-2 md:flex-row md:space-y-0">
-        <div class="font-bold text-cyan">
-          https://rel.link/J8J9F
-        </div>
-        <button class="p-2 px-8 text-white bg-darkViolet rounded-lg hover:opacity-70 focus:outline-none">
-          copy
-        </button>
-      </div>
-     </div>
+                 <!-- Small Text -->
+                  <p class="mt-6 opacity-50">
+                   "I started as a total newbie with vertualy no coding
+                   skills. I now
+                   Getting guidence from them and learning from thier experiences was easy.
+                   Getting guidence from them and learning from thier experiences was easy.
+                   work as a mobile engeenier for a big company. This was one of the 
+                   best investments I have made in myself"
+                  </p>
+               </div>
 
-     <!-- Link 3  -->
-     <div class="flex flex-col items-center justify-between w-full p-6 bg-white rounded-lg md:flex-row">
-      <p class="font-bold text-center text-veryDarkViolet md:text-left">
-        https://google.com/fromendomenter.io
-      </p>
+               
+                 <!-- Box 6-->
+              <div class="p-10 rounded-xl text-gray-900 bg-white md:hidden">
+                
+                <!-- Box Header -->
+                 <div class="flex space-x-4">
+                   <img src="images/profile-3.jpg" alt="" class="w-10 h-10 rounded-full ring-2
+                    ring-purple-300">
+                    <div class="text-sm">
+                       <h4 class="opacity-90">kirra withel</h4>
+                       <p class="opacity-50">Verified Graduate</p>
+                    </div>
+                 </div>
 
-      <div class="flex flex-col items-center justify-end flex-1 space-x-4 space-y-2 md:flex-row md:space-y-0">
-        <div class="font-bold text-cyan">
-          https://rel.link/J8R9F
-        </div>
-        <button class="p-2 px-8 text-white bg-cyan rounded-lg hover:opacity-70 focus:outline-none">
-          copy
-        </button>
-      </div>
-     </div>
+                 <!-- Large text -->
+                  <p class="mt-6 text-xl">
+               Such a life changing experience. Highly recomended!
+                  </p>
 
-
-  </div>
-
- </section>
-
-
- <!-- stats section -->
-  <section id="stats" class="py-24 bg-gray-100">
-    <div class="container mx-auto px-3">
-      <h2 class="text-4xl mb-6 font-bold text-center">
-        Advanced Statiscs 
-      </h2>
-    
-      <p class="max-w-xs mx-auto text-center text-gray-400 md:max-w-md">
-        Track how your links are performing across the web with our
-        advanced 
-        statsics dashbored.
-      </p>
-
-    </div>
-  </section>
-
-  <!-- Featue box section -->
-   <section id="features" class="pb-32 bg-gray-100">
-    <div class="relative container flex flex-col items-start px-6 mx-auto md:flex-row md:space-x-7">
-      <!-- horizontal line -->
-       <div
-        class="hidden absolute top-24 w-10/12 left-16 h-3 bg-cyan md:block"></div>
-
-       <!-- vertical line -->
-     <div class="absolute w-2 left-1/2  h-full -ml-1 bg-cyan md:hidden"></div>
-
-     <!-- box 1 -->
-      <div class="relative flex flex-col p-6 space-y-6 bg-white rounded-lg md:w-1/3">
-        <!-- image positioning -->
-         <div class="absolute -ml-10 left-1/2  -top-10 md:left-16">
-          <!-- image container for background and center -->
-           <div class="flex items-center justufy-center w-20 h-20 p-4 rounded-full bg-veryDarkViolet">
-            <img src="images/icon-brand-recognition.svg" alt="">
-           </div>
-         </div>
-
-         <h5 class="pt-6 text-xl font-bold text-center capitalize md:text-left">
-          Brand recognition
-         </h5>
-
-         <p class="text-center text-gray-400 md:text-left">
-          Boost your brand recognition wiyh each click . Genertic links
-          don't mean a thing. Brand links help instill confidencein your content.
-         </p>
-      </div>
-
-      
-     <!-- box 2 -->
-     <div class="relative flex flex-col p-6 mt-24 space-y-6 bg-white rounded-lg md:mt-8 md:w-1/3">
-      <!-- image positioning -->
-       <div class="absolute -ml-10 left-1/2  -top-10 md:left-16">
-        <!-- image container for background and center -->
-         <div class="flex items-center justufy-center w-20 h-20 p-4 rounded-full bg-veryDarkViolet">
-          <img src="images/icon-detailed-records.svg" alt="">
-         </div>
-       </div>
-
-       <h5 class="pt-6 text-xl font-bold text-center capitalize md:text-left">
-       Detailed records
-       </h5>
-
-       <p class="text-center text-gray-400 md:text-left">
-        Boost your brand recognition wiyh each click . Genertic links
-        don't mean a thing. Brand links help instill confidencein your content.
-       </p>
-    </div>
-
-
-    <!-- box 3 -->
-    <div class="relative flex flex-col p-6 mt-24 space-y-6 bg-white rounded-lg md:mt-16 md:w-1/3">
-      <!-- image positioning -->
-       <div class="absolute -ml-10 left-1/2  -top-10 md:left-16">
-        <!-- image container for background and center -->
-         <div class="flex items-center justufy-center w-20 h-20 p-4 rounded-full bg-veryDarkViolet">
-          <img src="images/icon-fully-customizable.svg" alt="">
-         </div>
-       </div>
-
-       <h5 class="pt-6 text-xl font-bold text-center capitalize md:text-left">
-      fully customisable
-       </h5>
-
-       <p class="text-center text-gray-400 md:text-left">
-        Boost your brand recognition wiyh each click . Genertic links
-        don't mean a thing. Brand links help instill confidencein your content.
-       </p>
-    </div>
-
-
-    </div>
-   </section>
-
-    <!-- C SECTFION  -->
-     <section id="cta" class="py-24 bg-darkViolet">
-       <div class="flex flex-col p-2 space-y-6">
-        <h5 class="mx-auto-space-y-10 text-4xl font-bold text-center text-white">
-          Boost your links today
-        </h5>
-
-        <button class="px-10 py-5 mx-auto text-2xl font-bold text-white rounded-full
-         bg-cyan hover:bg-cyanLight md:text-base md:py-3 focus:outline-none">
-          Get Started
-        </button>
-       </div>
-     </section>
-<!-- footer -->
-     <footer class="py-16 bg-veryDarkViolet">
-      <div class="container flex flex-col items-center justify-between mx-auto space-y-16
-       md:flex-row md:space-y-0 md:items-start">
-<!-- Logo -->
- <img src="images/logo (1).svg" alt="">
-
- <!-- Menus Container -->
-  <div class="flex flex-col space-y-16 md:space-x-20 md:flex-row md:space-y-0">
-    <!-- menu 1 -->
-     <div class="flex flex-col items-center w-full md:items-start">
-      <div class="mb-5 font-bold text-white capitalize">Features</div>
-      <div class="flex flex-col items-center space-y-3 md:items-start">
-        <a href="#" class="capitalize text-grayishViolet hover:text-cyan">
-          Link Shorting
-        </a>
-        <a href="#" class="capitalize text-grayishViolet hover:text-cyan">
-          Branded links
-        </a>
-        <a href="#" class="capitalize text-grayishViolet hover:text-cyan">
-          Analtics
-        </a>
+                 <!-- Small Text -->
+                  <p class="mt-6 opacity-50">
+                   "Before join the Mycode i have naver written a line ofcode.
+                   needed some structure from profetionals who can help me 
+                   learn programing staep by stap.
+                   I was encougred to enroll by a former 
+                   of thiers who can only say wonderfull things about 
+                   the program.
+                   efore join the Mycode i have naver written a line ofcode.
+                   needed some structure from profetionals who can help me 
+                   learn programing staep by stap.
+                   efore join the Mycode i have naver written a line ofcode.
+                   needed some structure from profetionals who can help me 
+                   learn programing staep by stap.
+                   I was encougred to enroll by a former 
+                   of thiers. "
+                  </p>
+               </div>
         
-     </div>
-  </div>
-
-   <!-- menu 2 -->
-   <div class="flex flex-col items-center w-full md:items-start">
-    <div class="mb-5 font-bold text-white capitalize">Resources</div>
-    <div class="flex flex-col items-center space-y-3 md:items-start">
-      <a href="#" class="capitalize text-grayishViolet hover:text-cyan">
-       Blog
-      </a>
-      <a href="#" class="capitalize text-grayishViolet hover:text-cyan">
-        Developers
-      </a>
-      <a href="#" class="capitalize text-grayishViolet hover:text-cyan">
-      Supports
-      </a>
-      
-   </div>
-</div>
-
- <!-- menu 3 -->
- <div class="flex flex-col items-center w-full md:items-start">
-  <div class="mb-5 font-bold text-white capitalize">Company</div>
-  <div
-   class="flex flex-col items-center space-y-3 md:items-start">
-    <a href="#" class="capitalize text-grayishViolet hover:text-cyan">
-     About
-    </a>
-    <a href="#" class="capitalize text-grayishViolet hover:text-cyan">
-      Our Team
-    </a>
-    <a href="#" class="capitalize text-grayishViolet hover:text-cyan">
-      Contacts
-    </a>
-    
- </div>
-</div>
-
-<!-- social Container -->
- <div class="flex space-x-6 md:flex md:items-start md:flex-col md:space-x-10 md:left-10">
-  <a href="#">
-    <img src="images/icon-facebook.svg" alt="" class="ficon">
-  </a>
-
-  <a href="#">
-    <img src="images/icon-twitter.svg" alt="" class="ficon">
-  </a>
-
-  <a href="#">
-    <img src="images/icon-instagram.svg" alt="" class="ficon">
-  </a>
-
-  <a href="#">
-    <img src="images/icon-pinterest.svg" alt="" class="ficon">
-  </a>
- </div>
       </div>
-     </footer>
-     </body>
+     </div>
+</body>
 </html>
