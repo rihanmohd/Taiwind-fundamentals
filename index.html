@@ -1,214 +1,366 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Testimonial Grid</title>
-    <link rel="stylesheet" href="css/style.css">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="css/style.css">
+   <script>
+         // https://www.freecodecamp.org/news/how-to-build-a-dark-mode-switcher-with-tailwind-css-and-flowbite
+         if (
+        localStorage.getItem('color-theme') === 'dark' ||
+        (!('color-theme' in localStorage) &&
+          window.matchMedia('(prefers-color-scheme: dark)').matches)
+      ) {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
+   </script>
+   <script src="js/script.js" defer></script>
+   <title>FyLO WEB </title>
 </head>
-<body class="bg-gray-200">
-   
-    <!-- Global container -->
-     <div class="container mx-auto max-w-7xl p-2 md:p-10">
-        <!-- Grid container -->
-         <div class="grid gap-6 grid-cols-1 text-white md:grid-cols-4
-         md:grid-rows-2">
-            <!-- Box 1 -->
-             <div class="relative p-10 rounded-xl bg-purple-700 md:col-span-2">
-                <!-- quotes image -->
-                 <img src="images/bg-quotes.png" alt="" class="absolute  top-3 right-10
-                 scale-125 md:top-7 md:right-24 md:scale-150">
-                 <!-- Box Header -->
-                  <div class="flex z-10 space-x-4">
-                    <img src="images/profile-1.jpg" alt="" class="w-10 h-10 rounded-full ring-2
-                     ring-purple-300">
-                     <div class="text-sm">
-                        <h4 class="opacity-90">Daniel Collige</h4>
-                        <p class="opacity-50">Verified Graduate</p>
-                     </div>
-                  </div>
+<body class="dark:bg-darkBlue dark:text-white font-opensans">
+<!--  Header -->
+     <header class="container mx-auto mt-10 px-6 text-center h-40 md:h-20">
 
-                  <!-- Large text -->
-                   <p class="relative z-10 mt-6 text-xl">
-                    I  recived a job offer mid-course, and the subjects <I>learned were
-                        Current, if not more so, in the Company i joined.
-                        get every penny's worth.
-                    </I>
-                   </p>
+ <!-- Dynamic Logo -->
+      <div class="bg-logo-light-mode dark:bg-logo-dark-mode bg-no-repeat h-20 w-48 mx-auto md:mx-0 md:absolute top-10 left-10">
+      </div>
 
-                  <!-- Small Text -->
-                   <p class="mt-6 opacity-50 line-clamp-6">
-                    "I was an EMT for many years  before I joined the mycode.
-                    i have been looking to make aa transition and have heared some people worthhad an 
-                    amazing experience here.  I signed up for a free intru course and
-                    fun . I enrolled shortly here therefore . the next 12 weaks was the best 
-                    and most grualling time of my life.
-                    since completeing the course i have succesfully switched courses,
-                    working as aSoftware Engineer at a VR startup. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque tenetur, sed laudantium dolor eos earum vero, ullam commodi incidunt dicta expedita amet officia minima, error officiis enim! Tempora, officia ullam suscipit fugit eum animi nihil necessitatibus pariatur! Eaque reprehenderit consequuntur quos adipisci alias, aspernatur corrupti laboriosam? Aspernatur commodi quia expedita. "
-                   </p>
+ <!-- Menu -->
+       <div class="flex items-center justify-center space-x-4
+        md:space-x-10 md:absolute top-12 right-10">
+      <a href="#features" class="hover:text-accentCyan">Features</a>
+      <a href="#testmonials" class="hover:text-accentCyan">Testmonials</a>
+
+<!-- Dark/light mode button -->
+ <button id="theme-toggle" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2 5">
+   <!-- Dark svg icon  -->
+   <svg
+   id="theme-toggle-dark-icon"
+   class="w-5 h-5 hidden"
+   fill="currentColor"
+   viewBox="0 0 20 20"
+   xmlns="http://www.w3.org/2000/svg"
+ >
+   <path
+     d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+   ></path>
+ </svg>
+
+ <!-- Light svg icon -->
+ <svg
+ id="theme-toggle-light-icon"
+ class="w-5 h-5 hidden"
+ fill="currentColor"
+ viewBox="0 0 20 20"
+ xmlns="http://www.w3.org/2000/svg"
+>
+ <path
+   d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+   fill-rule="evenodd"
+   clip-rule="evenodd"
+ ></path>
+</svg>
+ </button>
+   </div>
+     </header>
+
+     <!-- hero section  -->
+      <section id="hero" class="bg-curvy-light-mode dark:bg-curvy-dark-mode bg-no-repeat bg-contain bg-bottom">
+         <!-- hero container -->
+          <div class="container mx-auto px-6 text-center md:pt-20 pb-52">
+            <img src="images/illustration-intro (1).png " alt="" class="mx-auto">
+            <h1 class="max-w-2xl mx-auto mb-10 text-3xl font-bold leading-normal mt-14 md:text-4xl">
+               All yor files in one secure location, assessible anywhere.
+            </h1>
+            <p class="max-w-sm mx-auto mb-10 text-sm md:max-w-xl md:text-lg">
+               Fylo stores all your most important files in one secure location.
+               Access them wherever you need, share and collaborate with friends
+               family, and co-workers.
+            </p>
+
+            <button class="p-3 rounded-full w-52 bg-accentCyan hover:scale-95">Get Started</button>
+          </div>
+      </section>
+
+      <!-- Feature section  -->
+       <section id="features" class="pt-12 bg-gray-50 dark:bg-darkBlue1">
+        <!-- feature container -->
+         <div class="container mx-auto px-6 pb-32">
+          <!-- First Row  -->
+           <div 
+           class="flex flex-col space-y-24 text-center md:flex-row md:space-y-0">
+
+            <!-- Item 1 -->
+             <div 
+             class="flex flex-col items-center space-y-2 md:w-1/2">
+         <div class="flex items-center justify-center h-24 mb-6">
+       <img src="images/icon-access-anywhere.svg" alt="" >
+        </div>
+
+        <h3 class="text-xl font-bold">Access your file from anywhere</h3>
+        <p class="max-w-md">
+          The ability to use a smrtphone, tablet, or a computer 
+          to access your account means your files follow you anywhere.
+        </p>
              </div>
 
+              <!-- Item 2 -->
+              <div 
+              class="flex flex-col items-center space-y-2 md:w-1/2">
+          <div class="flex items-center justify-center h-24 mb-6">
+        <img src="images/icon-security.svg" alt="" >
+         </div>
+ 
+         <h3 class="text-xl font-bold">Security you can trust</h3>
+         <p class="max-w-md">
+          2-factor authontication and user-controlled encryption 
+          are just a 
+          couple of the security features we allow to help secure your files.
+         </p>
+        </div>
+      </div>
 
-              <!-- Box 2 -->
-              <div class="p-10 rounded-xl bg-gray-600">
-                
-                 <!-- Box Header -->
-                  <div class="flex space-x-4">
-                    <img src="images/profile-2.jpg" alt="" class="w-10 h-10 rounded-full ring-2
-                     ring-purple-300">
-                     <div class="text-sm">
-                        <h4 class="opacity-90">jonathen walters</h4>
-                        <p class="opacity-50">Verified Graduate</p>
-                     </div>
-                  </div>
+        <!-- Second Row  -->
+        <div 
+        class="flex flex-col space-y-24 mt-28 text-center md:flex-row md:space-y-0">
 
-                  <!-- Large text -->
-                   <p class="mt-6 text-xl">
-                The team was very Supportive and kept me motiveted
-                   </p>
+         <!-- Item 3 -->
+          <div 
+          class="flex flex-col items-center space-y-2 md:w-1/2">
+      <div class="flex items-center justify-center h-24 mb-6">
+    <img src="images/icon-collaboration.svg" alt="" >
+     </div>
 
-                  <!-- Small Text -->
-                   <p class="mt-6 opacity-50 line-clamp-5">
-                    "I started as a total newbie with vertualy no coding
-                    skills. I now
-                    work as a mobile engeenier for a big company. This was one of the 
-                    best investments I have made in myself Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet similique magnam aspernatur veritatis, facere totam illo natus eveniet corrupti unde id nulla iste. Aliquam earum, laborum culpa veritatis nobis dolorem! Molestias iure sapiente sit quia! Non eveniet aperiam, alias ea nihil fugiat debitis iste, itaque exercitationem ducimus, vero quae maiores. "
-                   </p>
-                </div>
+     <h3 class="text-xl font-bold">Access your file from anywhere</h3>
+     <p class="max-w-md">
+       The ability to use a smrtphone, tablet, or a computer 
+       to access your account means your files follow you anywhere.
+     </p>
+          </div>
 
-                 <!-- Box 3 -->
-              <div class="hidden p-10 rounded-xl text-gray-900 bg-white md:block
-              md:row-span-2">
-                
-                <!-- Box Header -->
-                 <div class="flex space-x-4">
-                   <img src="images/profile-3.jpg" alt="" class="w-10 h-10 rounded-full ring-2
-                    ring-purple-300">
-                    <div class="text-sm">
-                       <h4 class="opacity-90">kirra withel</h4>
-                       <p class="opacity-50">Verified Graduate</p>
-                    </div>
-                 </div>
+           <!-- Item 4 -->
+           <div 
+           class="flex flex-col items-center space-y-2 md:w-1/2">
+       <div class="flex items-center justify-center h-24 mb-6">
+     <img src="images/icon-any-file.svg" alt="" >
+      </div>
 
-                 <!-- Large text -->
-                  <p class="mt-6 text-xl">
-               Such a life changing experience. Highly recomended!
-                  </p>
+      <h3 class="text-xl font-bold">Security you can trust</h3>
+      <p class="max-w-md">
+       2-factor authontication and user-controlled encryption 
+       are just a 
+       couple of the security features we allow to help secure your files.
+      </p>
+     </div>
+   </div>
 
-                 <!-- Small Text -->
-                  <p class="mt-6 opacity-50">
-                   "Before join the Mycode i have naver written a line ofcode.
-                   needed some structure from profetionals who can help me 
-                   learn programing staep by stap.
-                   I was encougred to enroll by a former 
-                   of thiers who can only say wonderfull things about 
-                   the program.
-                   efore join the Mycode i have naver written a line ofcode.
-                   needed some structure from profetionals who can help me 
-                   learn programing staep by stap.
-                   efore join the Mycode i have naver written a line ofcode.
-                   needed some structure from profetionals who can help me 
-                   learn programing staep by stap.
-                   I was encougred to enroll by a former 
-                   of thiers. "
-                  </p>
-               </div>
+         </div>
+       </section>
 
-                <!-- Box 4 -->
-              <div class="p-10 rounded-xl text-gray-900 bg-white">
-                
-                <!-- Box Header -->
-                 <div class="flex space-x-4">
-                   <img src="images/profile-1.jpg" alt="" class="w-10 h-10 rounded-full ring-2
-                    ring-purple-300">
-                    <div class="text-sm">
-                       <h4 class="opacity-90">Jennets Harmon</h4>
-                       <p class="opacity-50">Verified Graduate</p>
-                    </div>
-                 </div>
 
-                 <!-- Large text -->
-                  <p class="mt-6 text-xl">
-             An overall as a wonderfull and rewarding experience
-                  </p>
+<!-- Productive section -->
+ <section id="productve" class="bg-white dark:bg-darkBlue">
+  <!-- productive container -->
+   <div class="container flex flex-col items-center mx-auto px-6 pt-24 pb-32 md:flex-row md:space-x-16">
+    <!-- Image -->
+      <div class="md:w-1/2">
+        <img src="images/illustration-stay-productive.png" alt="" class="mb-10">
+      </div>
 
-                 <!-- Small Text -->
-                  <p class="mt-6 opacity-50">
-                   "Thank you for the wonderfull! I now have a jobI really 
-                   enjoy. and make a good living while doing something I love."
-                  </p>
-               </div>
+    <!-- content -->
+     <div class="flex flex-col items-start md:w-1/2">
+      <div class="flex flex-col space-y-5">
+        <h4 class="max-w-md text-xl font-bold md:text-4xl">
+          Stay Productive, wherever you are 
+        </h4>
+        <p class="text-md md:text-lg">
+     Never let location be an issue when accessing your files,
+     Fylo has you coverd for all of your files storage needs.
+        </p>
 
-                <!-- Box 5 -->
-              <div class="p-10 rounded-xl bg-gray-900 md:col-span-2">
-                
-                <!-- Box Header -->
-                 <div class="flex space-x-4">
-                   <img src="images/profile-3.jpg" alt="" class="w-10 h-10 rounded-full ring-2
-                    ring-purple-300">
-                    <div class="text-sm">
-                       <h4 class="opacity-90">Patrick Abrams</h4>
-                       <p class="opacity-50">Verified Graduate</p>
-                    </div>
-                 </div>
+        <p class="text-md md:text-lg">
+        Securely share files and folders with friends , family and 
+        colleagues for live collaboration. No email attechments
+        requred.
+        </p>
+      </div>
 
-                 <!-- Large text -->
-                  <p class="mt-6 text-xl">
-              " Awesome teaching supports from TAs who did the myCode 
-              themeselves.
-              Getting guidence from them and learning from thier experiences was easy."
-                  </p>
+      <!-- link -->
+       <div class="block mt-4">
+        <a href="#" class="border-b border-accentCyan text-accentCyan">
+          See how flyo works
+          <img src="images/icon-arrow.svg" alt="" class="inline pb-2">
+        </a>
+       </div>
+     </div>
+   </div>
+ </section>
 
-                 <!-- Small Text -->
-                  <p class="mt-6 opacity-50">
-                   "I started as a total newbie with vertualy no coding
-                   skills. I now
-                   Getting guidence from them and learning from thier experiences was easy.
-                   Getting guidence from them and learning from thier experiences was easy.
-                   work as a mobile engeenier for a big company. This was one of the 
-                   best investments I have made in myself"
-                  </p>
-               </div>
+ <!-- Testmonial section -->
+  <section id="testmonials" class="bg-gray-50 dark:bg-darkBlue">
+    <!-- Testimonial container -->
+     <div class="container mx-auto px-6 pt-12 pb-80 md:pb-96">
+      <!-- Boxes cntainer -->
+       <div class="relative flex flex-col w-full space-y-6 md:flex-row md:space-y-0 md:space-x-12">
+        <!-- quotes image -->
+         <img src="images/bg-quotes.png" alt="" class="absolute left-1 -top-2 w-10 md:-top-16 md:w-20">
 
-               
-                 <!-- Box 6-->
-              <div class="p-10 rounded-xl text-gray-900 bg-white md:hidden">
-                
-                <!-- Box Header -->
-                 <div class="flex space-x-4">
-                   <img src="images/profile-3.jpg" alt="" class="w-10 h-10 rounded-full ring-2
-                    ring-purple-300">
-                    <div class="text-sm">
-                       <h4 class="opacity-90">kirra withel</h4>
-                       <p class="opacity-50">Verified Graduate</p>
-                    </div>
-                 </div>
+         <!-- box 1 -->
+          <div class="flex flex-col p-10 space-y-6 rounded-lg bg-gray-100 dark:bg-darkBlue3 md:w-1/3">
+            <p class="text-sm leading-5 md:text-lg">
+              Fylo has improved our team productivity by an order of
+              magnitude.
+              Since making the switch our team has become a well oiled 
+              colleboration machine.
+            </p>
 
-                 <!-- Large text -->
-                  <p class="mt-6 text-xl">
-               Such a life changing experience. Highly recomended!
-                  </p>
+            <!-- coustumer info -->
+             <div class="flex space-x-4">
+              <img src="images/profile-1.jpg" alt="" class="w-10 h-10 rounded-full">
+              <div>
+                <h5 class="text-sm font-semibold">Satish patel</h5>
+                <p class="text-xs font-extralight">Founder & CEO. Huddle</p>
+              </div>
+             </div>
+          </div>
 
-                 <!-- Small Text -->
-                  <p class="mt-6 opacity-50">
-                   "Before join the Mycode i have naver written a line ofcode.
-                   needed some structure from profetionals who can help me 
-                   learn programing staep by stap.
-                   I was encougred to enroll by a former 
-                   of thiers who can only say wonderfull things about 
-                   the program.
-                   efore join the Mycode i have naver written a line ofcode.
-                   needed some structure from profetionals who can help me 
-                   learn programing staep by stap.
-                   efore join the Mycode i have naver written a line ofcode.
-                   needed some structure from profetionals who can help me 
-                   learn programing staep by stap.
-                   I was encougred to enroll by a former 
-                   of thiers. "
-                  </p>
-               </div>
+           <!-- box 2 -->
+           <div class="flex flex-col p-10 space-y-6 rounded-lg bg-gray-100 dark:bg-darkBlue3 md:w-1/3">
+            <p class="text-sm leading-5 md:text-lg">
+              Fylo has improved our team productivity by an order of
+              magnitude.
+              Since making the switch our team has become a well oiled 
+              colleboration machine.
+            </p>
+
+            <!-- coustumer info -->
+             <div class="flex space-x-4">
+              <img src="images/profile-2.jpg" alt="" class="w-10 h-10 rounded-full">
+              <div>
+                <h5 class="text-sm font-semibold">Bruce Mckenzee</h5>
+                <p class="text-xs font-extralight">Founder & CEO. Huddle 2</p>
+              </div>
+             </div>
+          </div>
+
+
+           <!-- box 3 -->
+           <div class="flex flex-col p-10 space-y-6 rounded-lg bg-gray-100 dark:bg-darkBlue3 md:w-1/3">
+            <p class="text-sm leading-5 md:text-lg">
+              Fylo has improved our team productivity by an order of
+              magnitude.
+              Since making the switch our team has become a well oiled 
+              colleboration machine.
+            </p>
+
+            <!-- coustumer info -->
+             <div class="flex space-x-4">
+              <img src="images/profile-3.jpg" alt="" class="w-10 h-10 rounded-full">
+              <div>
+                <h5 class="text-sm font-semibold">Eva Boyed</h5>
+                <p class="text-xs font-extralight">Founder & CEO. Huddle 3</p>
+              </div>
+             </div>
+          </div>
+       </div>
+     </div>
+  </section>
+
+  <!-- Early access section -->
+   <section id="early-access" class="relative px-6 dark:bg-darkBlue2 md:px-0">
+    <div class="relative -top-40 max-w-4xl mx-auto p-10 px-6 space-y-6 text-center rounded-lg bg-gray-200 dark:bg-darkBlue1 md:px-16">
+      <h5 class="text-2xl font-bold">Get early access today</h5>
+      <p class="text-sm">
+        It only takes a minuet to sign up and our free statrter tire is 
+        extremily generouse. If you have any question, our support team would be happy to help you.
+      </p>
+
+      <!-- input & button  container -->
+       <div class="flex flex-col items-start space-y-6 md:space-y-0 md:space-x-6 md:flex-row">
+        <div class="w-full md:flex-1">
+          <input type="text" class="w-full px-10 py-3 rounded-full focus:outline-none" placeholder="email@example.com">
+        </div>
+
+        <button class="w-full p-3 px-6 rounded-full bg-accentCyan md:w-56 hover:scale-95">
+          Get Started For Free
+        </button>
+       </div>
+    </div>
+   </section>
+
+   <!-- Footer -->
+    <footer class="bg-darkBlue2 pb-10 text-white">
+      <div class="container mx-auto pt-12 px-5 pb-10">
+        <!-- flex container -->
+         <div class="flex flex-col justify-between space-y-24 md:flex-row md:space-y-0">
+          <!-- Email & phone -->
+     <div class="mt-10 space-y-6">
+      <div class="flex items-center space-x-3 md:-mt-10">
+        <div class="w-6">
+          <img src="images/icon-phone.svg" alt="" class="scale-10">
+
+        </div>
+        <div> +91826703416 </div>
+      </div>
+      <div class="flex items-center space-x-3 ">
+        <div class="w-6">
+          <img src="images/icon-email.svg" alt="" class="scale-10">
+        </div>
+
+        <div>example@mycode.com</div>
+      </div>
+     </div>
+
+          <!-- Menu -->
+     <div class="flex flex-col space-y-10 text-xl md:text-base md:space-x-20 md:space-y-0 md:flex-row">
+      <div class="flex flex-col space-y-3">
+        <a href="#">About</a>
+        <a href="#">Press</a>
+        <a href="#">Jobs</a>
+        <a href="#">Blog</a>
+      </div>
+
+      <div class="flex flex-col space-y-3">
+        <a href="#">Contect Us</a>
+        <a href="#">Terms</a>
+        <a href="#">Privecy</a>
         
       </div>
      </div>
+
+
+
+          <!-- Social -->
+
+      <div class="flex justify-center pb-10 space-x-3">
+        <div>
+    <a href="#">
+      <img src="images/facebook.svg" alt="" class="p-2 bg-darkBlue rounded-full ficon">
+    </a>
+        </div>
+
+        <div>
+          <a href="#">
+            <img src="images/twitter.svg" alt="" class="p-2 bg-darkBlue rounded-full ficon">
+          </a>
+              </div>
+
+              
+              <div>
+                <a href="#">
+                  <img src="images/instagram.svg" alt="" class="p-2 bg-darkBlue rounded-full ficon">
+                </a>
+                    </div>
+            
+
+      </div>
+      </div>
+     </div>
+    </footer>
 </body>
 </html>
